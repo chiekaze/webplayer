@@ -4,113 +4,41 @@
 <title>Web Player</title>
 <head>
   <link href="skin/blue.monday/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
-  <!--<link type="text/css" href="skin/pink.flag/jplayer.pink.flag.css" rel="stylesheet" />-->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-  <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+  <!--<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>-->
   
 <script type="text/javascript">
 $(document).ready(function(){
-
-	new jPlayerPlaylist({
-		jPlayer: "#jquery_jplayer_1",
-		cssSelectorAncestor: "#jp_container_1"
-	}, [
-		{
-			title:"リサフランク420 / 現代のコンピュー",
-			artist:"Macintosh Plus",
-			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=103929e4fdbba40cea4f7b697f32f953a&authkey=ARjPmyEBohlxsWzday8Qw90",
-			poster: "assets/floralshoppe.png"
+	
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+				title:"リサフランク420 / 現代のコンピュー",
+				artist:"Macintosh Plus",
+				mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=103929e4fdbba40cea4f7b697f32f953a&authkey=ARjPmyEBohlxsWzday8Qw90",
+			});
 		},
-		{
-			title:"Nuclear",
-			artist: "Mike Oldfield",
-			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=13d6a1f2b23b7435dbd8240c9ad47613d&authkey=AbvebcgDkMaC_3ofs3P0-2M",
-			poster: "assets/homoja.jpg"
-		},
-		{
-			title: "Remove Kebab",
-			mp3: "https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
-			poster: "https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1a4cfe779f3e44106aabe818b5e811b97&authkey=AYr3JxdZrKj4GNekcSc9Fs0"
-		},
-		{
-			title: "In The End It Has To Be This Way",
-			artist: "Jamie Christopherson",
-			m4v: "https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1c03570da40b7429b8dd6f5e0b3cebdf0&authkey=AZDwaPP3exM0ZBlQZsb0qdM"
-		},
-		{
-			title: "All Star",
-			artist: "Smash Mouth",
-			m4v: "https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=16b7bfe27941a4a27941815397434bd02&authkey=AaKKHa21JbZLFo_yHomqR04"
-		},
-		{
-			title: "Steins;Gate Main Theme",
-			m4v: "https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1d6078c1be8da46afb4406e0517647c5c&authkey=AcNu-SqMZdIDNjezMXDjJ8k"
-		}
-	], {
 		swfPath: "js/",
-		supplied: "mp3, oga, m4a, ogv, m4v, webmv",
+		supplied: "mp3",
 		wmode: "window",
 		useStateClassSkin: true,
 		autoBlur: false,
 		smoothPlayBar: true,
-		keyEnabled: true
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true
 	});
 });
 </script>
 </head>
-
-<body>
-<!--
+<body bgcolor="#66ff33">
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
 	<div class="jp-type-single">
 		<div class="jp-gui jp-interface">
-			<div class="jp-volume-controls">
-				<button class="jp-mute" role="button" tabindex="0">mute</button>
-				<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-				<div class="jp-volume-bar">
-					<div class="jp-volume-bar-value"></div>
-				</div>
-			</div>
-			<div class="jp-controls-holder">
-				<div class="jp-controls">
-					<button class="jp-play" role="button" tabindex="0">play</button>
-					<button class="jp-stop" role="button" tabindex="0">stop</button>
-				</div>
-				<div class="jp-progress">
-					<div class="jp-seek-bar">
-						<div class="jp-play-bar"></div>
-					</div>
-				</div>
-				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-				<div class="jp-toggles">
-					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-				</div>
-			</div>
-		</div>
-		<div class="jp-details">
-			<div class="jp-title" aria-label="title">&nbsp;</div>
-		</div>
-		<div class="jp-no-solution">
-			<span>Update Required</span>
-			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-		</div>
-	</div>
-</div>
-</body>
--->
-
-<body>
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-	<div class="jp-type-playlist">
-		<div class="jp-gui jp-interface">
 			<div class="jp-controls">
-				<button class="jp-previous" role="button" tabindex="0">previous</button>
 				<button class="jp-play" role="button" tabindex="0">play</button>
-				<button class="jp-next" role="button" tabindex="0">next</button>
 				<button class="jp-stop" role="button" tabindex="0">stop</button>
 			</div>
 			<div class="jp-progress">
@@ -128,16 +56,13 @@ $(document).ready(function(){
 			<div class="jp-time-holder">
 				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
 				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-			</div>
-			<div class="jp-toggles">
-				<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-				<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+				<div class="jp-toggles">
+					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+				</div>
 			</div>
 		</div>
-		<div class="jp-playlist">
-			<ul>
-				<li>&nbsp;</li>
-			</ul>
+		<div class="jp-details">
+			<div class="jp-title" aria-label="title">&nbsp;</div>
 		</div>
 		<div class="jp-no-solution">
 			<span>Update Required</span>
