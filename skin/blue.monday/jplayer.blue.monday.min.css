@@ -9,25 +9,31 @@
 .jp-video button::-moz-focus-inner {
 	border:0 }
 	
+@font-face {
+    font-family: 'disco';
+    src: url('discoduck3dital.ttf');
+}
+.jp-icon{font-family:'disco';}
+	
 .jp-audio,
 .jp-audio-stream,
 .jp-video {
-	margin-top:200px;
-	margin-left:700px;
+	margin-top:45%;
+	margin-left:0%;
 	/* font-size, -family, line-height */
-	font-size:20px;
-	font-family:Comic Sans MS, cursive, sans-serif;
+	font-size:25px;
+	font-family:disco;
 	line-height:1.6;
 	/* font color */
-	color:#660066;
+	color:#c60084;
 	/* border of the backround of player background (logics) */
 	border:1px solid #ff0000;
 	/* backround of player background (logics) */
-	background-color:#ffffff;}
+	background-color:#d6006b;}
 	
 /* width of the player */
 .jp-audio {
-	width:420px }
+	width:100% }
 /*	
 .jp-audio-stream {
 	width:182px }
@@ -189,8 +195,8 @@
 	
 .jp-audio .jp-type-single .jp-progress {
 	/* progress bar vertical pos and width */
-	left:110px;
-	width:186px }
+	left:5%;
+	width:90%; }
 
 /* playlist and video stuff-------------------------- */
 .jp-audio .jp-type-playlist .jp-progress {
@@ -224,8 +230,8 @@
 /* volume position and width */
 .jp-volume-controls {
 	position:absolute;
-	top:32px;
-	left:308px;
+	top:60px;
+	left:90%;
 	width:200px }
 
 /* video stuff---------------------------------- */
