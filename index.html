@@ -11,10 +11,15 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	
-	new jPlayerPlaylist({
+	var myPlaylist = new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_1",
-		cssSelectorAncestor: "#jp_container_1"
-	}, [
+		cssSelectorAncestor: "#jp_container_1",
+	
+		play: function (event) {
+            $("#now-playing").html($("#li.jp-playlist-current").text());
+        }
+	}, 
+	[
 		{
 			title:"Cro Magnon Man",
 			mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
@@ -31,25 +36,49 @@ $(document).ready(function(){
 			title:"Tempered Song",
 			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
 		}
-	], {
+	], 
+	
+	{
+		//default playlist options
+		playlistOptions: {
+			autoPlay: false,
+			loopOnPrevious: false,
+			shuffleOnLoop: true,
+			enableRemoveControls: false,
+			displayTime: 'slow',
+			addTime: 'fast',
+			removeTime: 'fast',
+			shuffleTime: 'slow'
+		},
+			
 		swfPath: "js/jplayer",
 		supplied: "mp3",
 		wmode: "window",
 		useStateClassSkin: true,
 		autoBlur: false,
 		smoothPlayBar: true,
-		keyEnabled: true
+		keyEnabled: true,
 	});
+	
+	//shuffles the playlist 
+	myPlaylist.shuffle(true); 
+	//plays the 1st item (doesnt work with shuffle)
+	//myPlaylist.play(1); 
+	
 });
 </script>
 </head>
 
-
 <body bgcolor="#e85cb9">
+<script type="text/javascript">
+</script>
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
 	<div class="jp-type-playlist">
 		<div class="jp-gui jp-interface">
+		
+		<div class = "now-playing"></div>
+		
 			<div class="jp-controls">
 				<button class="jp-previous" role="button" tabindex="0">previous</button>
 				<button class="jp-play" role="button" tabindex="0">play</button>
@@ -74,19 +103,21 @@ $(document).ready(function(){
 			</div>
 			<div class="jp-toggles">
 				<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-				<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
 			</div>
+						
 		</div>
-		<div class="jp-playlist">
+		<div class="jp-playlist" style="display:none;">
 			<ul>
 				<li>&nbsp;</li>
 			</ul>
 		</div>
+		
 		<div class="jp-no-solution">
 			<span>Update Required</span>
 			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
 		</div>
 	</div>
+	
 </div>
 </body>
 
