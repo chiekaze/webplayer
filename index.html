@@ -4,9 +4,13 @@
 <title>Web Player</title>
 <head>
   <link href="skin/blue.monday/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/css-stars.css"/>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+  <script type="text/javascript" src="js/jquery.barrating.min.js"></script>
+  
+ 
   
 <script type="text/javascript">
 $(document).ready(function(){
@@ -64,12 +68,34 @@ $(document).ready(function(){
 	myPlaylist.shuffle(true); 
 	//plays the 1st item (doesnt work with shuffle)
 	//myPlaylist.play(1); 
+
 	
 });
+
+
 </script>
 </head>
 
+<script type = "text/javascript">
+	
+	$(function()
+	{
+	
+		$('#example').barrating({
+		
+		theme: 'css-stars'
+		});
+	});
+	</script>
+
 <body bgcolor="#e85cb9">
+ <select id="example">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
 <script type="text/javascript">
 </script>
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
