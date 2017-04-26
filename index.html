@@ -18,6 +18,11 @@ $(document).ready(function(){
 				artist:"Macintosh Plus",
 				mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=103929e4fdbba40cea4f7b697f32f953a&authkey=ARjPmyEBohlxsWzday8Qw90",
 			});
+			$(this).jPlayer("setMedia", {
+				title:"ALL OF YOU ARE BABIES",
+				artist:"Remove Kebab",
+				mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
+			});
 		},
 		swfPath: "js/",
 		supplied: "mp3",
@@ -31,8 +36,28 @@ $(document).ready(function(){
 	});
 });
 </script>
+<style>
+img {
+position: absolute;
+top: 25%;
+left: 30%;
+transition: width 2s, transform 2s;
+}
+img:hover {
+width: 45%;
+transform: rotate(20deg);
+}
+</style>
 </head>
 <body bgcolor="#e85cb9">
+<img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
+<!--<script type="text/css">
+.gay {
+position: absolute;
+top: 50%;
+left: 50%;
+}
+</script>-->
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
 	<div class="jp-type-single">

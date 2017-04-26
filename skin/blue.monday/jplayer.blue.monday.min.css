@@ -195,7 +195,7 @@
 	
 .jp-audio .jp-type-single .jp-progress {
 	/* progress bar vertical pos and width */
-	left:5%;
+	left:7%;
 	width:90%; }
 
 /* playlist and video stuff-------------------------- */
@@ -230,7 +230,7 @@
 /* volume position and width */
 .jp-volume-controls {
 	position:absolute;
-	top:60px;
+	top:65%;
 	left:90%;
 	width:200px }
 
