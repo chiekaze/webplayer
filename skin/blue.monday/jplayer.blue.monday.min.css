@@ -33,7 +33,17 @@
 	
 /* width of the player */
 .jp-audio {
-	width:100% }
+	width:100% 
+}
+
+/*style for the current track*/
+#current-track {
+	background-color: yellow;
+	font-size: 100px;
+	font-family:disco;
+	color:#c60084;
+}
+
 /*	
 .jp-audio-stream {
 	width:182px }

@@ -6,34 +6,76 @@
   <link href="skin/blue.monday/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-  <!--<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>-->
+  <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
   
 <script type="text/javascript">
 $(document).ready(function(){
-	
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function (event) {
-			$(this).jPlayer("setMedia", {
-				title:"TESTING リサフランク420 / 現代のコンピュー",
-				artist:"Macintosh Plus",
-				mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=103929e4fdbba40cea4f7b697f32f953a&authkey=ARjPmyEBohlxsWzday8Qw90",
-			});
-			$(this).jPlayer("setMedia", {
-				title:"ALL OF YOU ARE BABIES",
-				artist:"Remove Kebab",
-				mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
-			});
+	//player constructor
+	var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1",
+	}, 
+	[
+		{
+			title:"GAYYYYYYYYYYY",
+			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
 		},
-		swfPath: "js/",
+		{
+			title:"Your Face",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+		},
+		{
+			title:"Cyber Sonnet",
+			mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+		},
+		{
+			title:"Tempered Song",
+			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
+		}
+	], 
+	{
+		//when played, get the current title 
+		play: function(event) {
+			console.log(event.jPlayer.status.media.title);
+			$('#current-track').empty();
+			$('#current-track').append(event.jPlayer.status.media.title);
+		},
+		
+		//if player paused and the timer is 0, the player is stopped so clear the current title
+		pause: function(event) {
+			if(event.jPlayer.status.currentTime == 0) {
+				console.log("stopped");
+				$('#current-track').empty();
+			}	
+		},
+		
+		//default playlist options
+		playlistOptions: {
+			//autoPlay: false,
+			loopOnPrevious: true,
+			//shuffleOnLoop: true,
+			//enableRemoveControls: false,
+			//displayTime: 'slow',
+			//addTime: 'fast',
+			//removeTime: 'fast',
+			//shuffleTime: 'slow'
+		},
+		
+		loop: true,
+		swfPath: "js/jplayer",
 		supplied: "mp3",
 		wmode: "window",
 		useStateClassSkin: true,
 		autoBlur: false,
 		smoothPlayBar: true,
 		keyEnabled: true,
-		remainingDuration: true,
-		toggleDuration: true
 	});
+	
+	//shuffles the playlist 
+	myPlaylist.shuffle(true); 
+	
+	//plays the n:st item (doesnt work with shuffle)
+	//myPlaylist.play(n); 
 });
 </script>
 <style>
@@ -49,6 +91,7 @@ transform: rotate(20deg);
 }
 </style>
 </head>
+
 <body bgcolor="#e85cb9">
 <img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
 <!--<script type="text/css">
@@ -58,12 +101,19 @@ top: 50%;
 left: 50%;
 }
 </script>-->
+<script type="text/javascript">
+</script>
+
+<!--display the current track-->
+<div id="current-track"> </div>
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-	<div class="jp-type-single">
-		<div class="jp-gui jp-interface">
+	<div class="jp-type-playlist">
+		<div class="jp-gui jp-interface">	
 			<div class="jp-controls">
+				<button class="jp-previous" role="button" tabindex="0">previous</button>
 				<button class="jp-play" role="button" tabindex="0">play</button>
+				<button class="jp-next" role="button" tabindex="0">next</button>
 				<button class="jp-stop" role="button" tabindex="0">stop</button>
 			</div>
 			<div class="jp-progress">
@@ -81,14 +131,14 @@ left: 50%;
 			<div class="jp-time-holder">
 				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
 				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-				<div class="jp-toggles">
-					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-				</div>
-			</div>
+			</div>				
 		</div>
-		<div class="jp-details">
-			<div class="jp-title" aria-label="title">&nbsp;</div>
+		<div class="jp-playlist" style="display:none;">
+			<ul>
+				<li>&nbsp;</li>
+			</ul>
 		</div>
+		
 		<div class="jp-no-solution">
 			<span>Update Required</span>
 			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
