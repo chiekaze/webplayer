@@ -4,10 +4,11 @@
 <title>Web Player</title>
 <head>
   <link href="skin/blue.monday/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/css-stars.css"/>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
-  
+  <script type="text/javascript" src="js/jquery.barrating.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	//player constructor
@@ -73,10 +74,13 @@ $(document).ready(function(){
 	
 	//shuffles the playlist 
 	myPlaylist.shuffle(true); 
-	
+	//plays the 1st item (doesnt work with shuffle)
+	//myPlaylist.play(1); 
 	//plays the n:st item (doesnt work with shuffle)
 	//myPlaylist.play(n); 
 });
+
+
 </script>
 <style>
 img {
@@ -92,15 +96,27 @@ transform: rotate(20deg);
 </style>
 </head>
 
+<script type = "text/javascript">
+	
+	$(function()
+	{
+	
+		$('#example').barrating({
+		
+		theme: 'css-stars'
+		});
+	});
+	</script>
+
 <body bgcolor="#e85cb9">
 <img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
-<!--<script type="text/css">
-.gay {
-position: absolute;
-top: 50%;
-left: 50%;
-}
-</script>-->
+ <select id="example">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
 <script type="text/javascript">
 </script>
 
