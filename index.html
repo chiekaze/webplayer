@@ -4,10 +4,11 @@
 <title>Web Player</title>
 <head>
   <link href="skin/blue.monday/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/css-stars.css"/>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
-  
+  <script type="text/javascript" src="js/jquery.barrating.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	//player constructor
@@ -17,8 +18,8 @@ $(document).ready(function(){
 	}, 
 	[
 		{
-			title:"Cro Magnon Man",
-			mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3",
+			title:"GAYYYYYYYYYYY",
+			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
 		},
 		{
 			title:"Your Face",
@@ -33,7 +34,6 @@ $(document).ready(function(){
 			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
 		}
 	], 
-	
 	{
 		//when played, get the current title 
 		play: function(event) {
@@ -76,20 +76,54 @@ $(document).ready(function(){
 	
 	//shuffles the playlist 
 	myPlaylist.shuffle(true); 
-	
+	//plays the 1st item (doesnt work with shuffle)
+	//myPlaylist.play(1); 
 	//plays the n:st item (doesnt work with shuffle)
 	//myPlaylist.play(n); 
 });
+
+
 </script>
+<style>
+img {
+position: absolute;
+top: 25%;
+left: 30%;
+transition: width 2s, transform 2s;
+}
+img:hover {
+width: 45%;
+transform: rotate(20deg);
+}
+</style>
 </head>
 
+<script type = "text/javascript">
+	
+	$(function()
+	{
+	
+		$('#example').barrating({
+		
+		theme: 'css-stars'
+		});
+	});
+	</script>
+
 <body bgcolor="#e85cb9">
+<img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
+ <select id="example">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
 <script type="text/javascript">
 </script>
 
 <!--display the current track-->
 <div id="current-track"> </div>
-
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
 	<div class="jp-type-playlist">
