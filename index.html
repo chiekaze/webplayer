@@ -52,16 +52,18 @@ $(document).ready(function(){
 		
 		//default playlist options
 		playlistOptions: {
-			//autoPlay: false,
+			autoPlay: false,
+			//this loops the playlist
 			loopOnPrevious: true,
-			//shuffleOnLoop: true,
-			//enableRemoveControls: false,
-			//displayTime: 'slow',
-			//addTime: 'fast',
-			//removeTime: 'fast',
-			//shuffleTime: 'slow'
+			shuffleOnLoop: false,
+			enableRemoveControls: false,
+			displayTime: 'slow',
+			addTime: 'fast',
+			removeTime: 'fast',
+			shuffleTime: 'slow'
 		},
 		
+		//this loops the playlist
 		loop: true,
 		swfPath: "js/jplayer",
 		supplied: "mp3",
@@ -115,6 +117,7 @@ $(document).ready(function(){
 				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
 			</div>				
 		</div>
+		<!--hide the playlist-->
 		<div class="jp-playlist" style="display:none;">
 			<ul>
 				<li>&nbsp;</li>
