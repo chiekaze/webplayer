@@ -211,12 +211,19 @@ $(document).ready(function(){
 	//myPlaylist.play(n); 
 });
 </script>
-
+<!--
+top:13%;
+left:27%;
+top:10%;
+left:25%;
+-->
 <style>
 img {
 position: fixed;
-top: 13%;
-left: 27%;
+top: 50%;
+left: 50%;
+margin-top: -25%;
+margin-left: -25%;
 animation: shake 10s infinite;
 animation-direction: alternate;
 animation-timing-function: ease-in-out;
@@ -224,44 +231,38 @@ animation-timing-function: ease-in-out;
 
 @keyframes shake {
 0% {
-top: 13%;
-left: 27%;
+margin-top: -25%;
+margin-left: -25%;
 width: 900px;
 height: 600px;
 }
-20% {
-top: 10%;
-left: 25%;
-width: 1000px;
-height: 666px;
-transform: rotate(-7deg);
-}
-40% {
-top: 10%;
-left: 25%;
-width: 1000px;
-height: 666px;
+25% {
+margin-top: -25%;
+margin-left: -25%;
+width: 900px;
+height: 600px;
 transform: rotate(7deg);
 }
-60% {
-top: 13%;
-left: 27%;
+50% {
+margin-top: -25%;
+margin-left: -25%;
 width: 900px;
 height: 600px;
 transform: rotate(-7deg);
 }
-80% {
-top: 13%;
-left: 27%;
-width: 900px;
-height: 600px;
+75% {
+margin-top: -27%;
+margin-left: -27%;
+width: 1000px;
+height: 666px;
 transform: rotate(7deg);
 }
 100% {
-top: 13%;
-left: 27%;
-width: 900px;
-height: 600px;
+margin-top: -27%;
+margin-left: -27%;
+width: 1000px;
+height: 666px;
+transform: rotate(-7deg);
 }
 }
 </style>
