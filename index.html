@@ -99,18 +99,22 @@ transform: rotate(20deg);
 <script type = "text/javascript">
 	
 	$(function()
-	{
-	
-		$('#example').barrating({
+	{	
+		$('#stars').barrating({
 		
-		theme: 'css-stars'
+		theme: 'css-stars',
+		showSelectedRating: false,
+		onSelect: function(number,text)
+		{
+			value = number;
+		}
 		});
 	});
 	</script>
 
 <body bgcolor="#e85cb9">
 <img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
- <select id="example">
+ <select id="stars">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
