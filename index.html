@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<title>Web Player</title>
+<title>HOTLINE Radio</title>
 <head>
+  <link rel="icon" href="assets/50blessings.png">
   <link href="skin/blue.monday/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="assets/css-stars.css"/>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
   <script type="text/javascript" src="js/jquery.barrating.min.js"></script>
+  
 <script type="text/javascript">
 $(document).ready(function(){
 	//player constructor
@@ -17,10 +19,6 @@ $(document).ready(function(){
 		cssSelectorAncestor: "#jp_container_1",
 	}, 
 	[
-		{
-			title:"GAYYYYYYYYYYY",
-			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
-		},
 		{
 			title:"Your Face",
 			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
@@ -32,6 +30,10 @@ $(document).ready(function(){
 		{
 			title:"Tempered Song",
 			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
+		},
+		{
+			title:"Moon - Dust",
+			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1f49f6168e1ea478fac8787c696202a66&authkey=ATfbU3BJNwr-QGIi_hhuOGQ",
 		}
 	], 
 	{
@@ -87,28 +89,85 @@ img {
 position: absolute;
 top: 25%;
 left: 30%;
-transition: width 2s, transform 2s;
+animation: shake 10s infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animaytion-fill-mode: forwards;
 }
+
+@keyframes shake {
+0% {
+width: 750px;
+height: 382px;
+}
+20% {
+width: 800px;
+height: 400px;
+transform: rotate(-7deg);
+}
+40% {
+width: 800px;
+height: 400px;
+transform: rotate(7deg);
+}
+60% {
+width: 750px;
+height: 382px;
+transform: rotate(-7deg);
+}
+80% {
+width: 750px;
+height: 382px;
+transform: rotate(7deg);
+}
+100% {
+width: 750px;
+height: 382px;
+}
+}
+</style>
+</head>
+<!--transition: width 2s, transform 2s;-->
+<!--
 img:hover {
 width: 45%;
 transform: rotate(20deg);
 }
+
 </style>
 
 </head>
+-->
 
 <script type = "text/javascript">
-	$(function()
-	{
-		$('#example').barrating({
+	$(function() {
+		$('#stars').barrating({
 		
-		theme: 'css-stars'
+			theme: 'css-stars',
+			showSelectedRating: false,
+			onSelect: function(number,text) {
+				value = number;
+		}
 		});
 	});
 </script>
 
 <body bgcolor="#e85cb9">
+
+<div class="logo">
 <img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
+</div>
+
+ <select id="stars">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+
+<!--display the current track-->
+<div id="current-track"> </div>
 
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -158,14 +217,6 @@ transform: rotate(20deg);
 		</div>
 	</div>
 </div>
-
-<select id="example">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
 
 </body>
 

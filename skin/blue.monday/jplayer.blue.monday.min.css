@@ -48,13 +48,6 @@
 	color:#c60084;
 }
 
-/* stars */
-#select {
-	position:fixed;
-	background-color:yellow;
-	left: 500px;
-}
-
 /* player background */
 .jp-interface {
 	/* position of player background */
