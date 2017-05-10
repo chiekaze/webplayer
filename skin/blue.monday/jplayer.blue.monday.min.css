@@ -18,8 +18,8 @@
 .jp-audio,
 .jp-audio-stream,
 .jp-video {
-	margin-top:45%;
-	margin-left:0%;
+	/*margin-top:45%;*/
+	/*margin-left:0%;*/
 	/* font-size, -family, line-height */
 	font-size:25px;
 	font-family:disco;
@@ -27,102 +27,49 @@
 	/* font color */
 	color:#c60084;
 	/* border of the backround of player background (logics) */
-	border:1px solid #ff0000;
+	/*border:1px solid #ff0000;*/
 	/* backround of player background (logics) */
-	background-color:#d6006b;}
+	/*background-color:#d6006b;*/}
 	
 /* width of the player */
-.jp-audio {
+/*.jp-audio {
 	width:100% 
-}
+}*/
 
 /*style for the current track*/
 #current-track {
-	background-color: yellow;
-	font-size: 100px;
+	/*width:500px;*/
+	/*height:40px;*/
+	position:fixed;
+	margin-left:180px;
+	margin-top:35px;
+	font-size: 40px;
 	font-family:disco;
 	color:#c60084;
 }
 
-/*	
-.jp-audio-stream {
-	width:182px }
-	
-.jp-video-270p {
-	width:480px }
-	
-.jp-video-360p {
-	width:640px }
-	
-.jp-video-full {
-	width:480px;
-	height:270px;
-	position:static!important;
-	position:relative }
-	
-.jp-video-full div div {
-	z-index:1000 }
-*/	
-
-/* video player stuff*/
-.jp-video-full .jp-jplayer {
-	top:0;
-	left:0;
-	position:fixed!important;
-	position:relative;
-	overflow:hidden }
-	
-.jp-video-full .jp-gui {
-	position:fixed!important;
-	position:static;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:1001 }
-	
-.jp-video-full .jp-interface {
-	position:absolute!important;
-	position:relative;
-	bottom:0;
-	left:0 }
-/*--------------------------------------------------------------*/
-
 /* player background */
 .jp-interface {
 	/* position of player background */
-	top:0px;
-	left:0px;
-	position:relative;
+	bottom:10px;
+	left:10px;
+	right:10px;
+	position:fixed;
 	background-color:#666699;
-	width:100% }
+	/*width:100% ;*/
+	border: 1px solid black;
+	/*margin: auto;*/
+    background-color: lightblue;
+}
 
 /* height of the player */
 .jp-audio .jp-interface,.jp-audio-stream .jp-interface {
 	height:100px }
 	
-/* video stuff */
-.jp-video .jp-interface {
-	border-top:1px solid #009be3 }
-	
-.jp-controls-holder {
-	clear:both;
-	width:440px;
-	margin:0 auto;
-	position:relative;
-	overflow:hidden;
-	top:-8px }
-	
-.jp-interface .jp-controls {
-	margin:0;
-	padding:0;
-	overflow:hidden }
-/*--------------------------------------------------------------*/
-	
 /* play and stop button */	
 .jp-audio .jp-controls {
 	width:180px;
-	padding:20px 20px 0 }
+	/*padding:20px 20px 0*/ }
 	
 .jp-audio-stream .jp-controls {
 	position:absolute;
@@ -131,12 +78,12 @@
 	width:142px }
 	
 .jp-video .jp-type-single .jp-controls {
-	width:78px;
+	width:780px;
 	margin-left:200px }
 	
 .jp-video .jp-type-playlist .jp-controls {
-	width:134px;
-	margin-left:172px }
+	width:130px;
+	margin-left:17201px }
 	
 .jp-video .jp-controls {
 	float:left }
@@ -151,6 +98,8 @@
 /* play button */
 .jp-play {
 	/* play button size */
+	margin-top:50px;
+	margin-left:10px;
 	width:40px;
 	height:40px;
 	background:url(jplayer.blue.monday.jpg) no-repeat }
@@ -168,9 +117,10 @@
 .jp-next,.jp-previous,.jp-stop {
 	/* stop-, next- and previous-button size */
 	/* and vertical position */
-	width:28px;
-	height:28px;
-	margin-top:5px }
+	width:40px;
+	height:40px;
+	margin-top:50px;
+	margin-left:10px;	}
 	
 /* stop button */
 .jp-stop {
@@ -196,28 +146,24 @@
 	
 .jp-progress {
 	overflow:hidden;
-	background-color:#ddd }
+	position:relative;
+	left:10px;
+	right:10px;
+	top:10px;
+	margin:auto;
+	/*width:100%;*/
+	background-color:#ddd; }
+	
 /* progress bar horizontal pos and height */
 .jp-audio .jp-progress {
-	position:absolute;
-	top:32px;
-	height:15px }
+	/*position:fixed;*/
+	height:30px; }
 	
-.jp-audio .jp-type-single .jp-progress {
-	/* progress bar vertical pos and width */
-	left:7%;
-	width:90%; }
-
 /* playlist and video stuff-------------------------- */
 .jp-audio .jp-type-playlist .jp-progress {
-	left:166px;
-	width:130px }
-	
-.jp-video .jp-progress {
-	top:0;
-	left:0;
-	width:100%;
-	height:10px }
+	position:absolute;
+ }
+
 /* ---------------------------------------------------------- */	
 /* intredasting you dont need these(yet)*/
 .jp-seek-bar {
@@ -240,18 +186,11 @@
 /* volume position and width */
 .jp-volume-controls {
 	position:absolute;
-	top:65%;
-	left:90%;
-	width:200px }
-
-/* video stuff---------------------------------- */
-.jp-audio-stream .jp-volume-controls {
-	left:70px }
-	
-.jp-video .jp-volume-controls {
-	top:12px;
-	left:50px }
-/* ---------------------------------------------------------- */	
+	top:60px;
+	right:120px;
+	margin:auto;
+	/*right:-4.2%;*/
+	/*width:20px */}
 
 .jp-volume-controls button {
 	display:block;
@@ -263,18 +202,18 @@
 
 /* mute and max buttons width and height */
 .jp-mute,.jp-volume-max {
-	width:18px;
-	height:15px }
+	width:30px;
+	height:30px }
 
 /* max button x pos */
 .jp-volume-max {
-	left:74px }
+	left:80px }
 	
 /* mute button x pos */
-/*.jp-mute {
-	left:
+.jp-mute {
+	left:-20px
 }
-*/	
+	
 .jp-mute {
 	background:url(jplayer.blue.monday.jpg) 0 -170px no-repeat }
 	
@@ -301,7 +240,7 @@
 	top:5px;
 	left:22px;
 	width:46px;
-	height:5px;
+	height:15px;
 	cursor:pointer }
 	
 .jp-volume-bar-value {
@@ -316,13 +255,10 @@
 	top:50px;
 	}
 
-/* timer x-pos and width*/
-.jp-audio .jp-type-single .jp-time-holder {
-	left:110px;
-	width:186px }
 /* same for playlist */
 .jp-audio .jp-type-playlist .jp-time-holder {
-	left:166px;
+	top:10px;
+	right:20px;
 	width:130px }
 
 /* current time widht and font size */
@@ -342,13 +278,6 @@
 	text-align:right;
 	cursor:pointer }
 	
-/* video stuff */
-.jp-video .jp-current-time {
-	margin-left:20px }
-	
-.jp-video .jp-duration {
-	margin-right:20px }
-/* ------------------------------ */	
 .jp-details {
 	font-weight:700;
 	text-align:center;
