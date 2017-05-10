@@ -18,10 +18,6 @@ $(document).ready(function(){
 	}, 
 	[
 		{
-			title:"GAYYYYYYYYYYY",
-			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=11d29bc9fb8174370ac28df0b480a1b45&authkey=AdsNKmvVDFeAKGw1gC2SGgE",
-		},
-		{
 			title:"Your Face",
 			mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
 		},
@@ -32,6 +28,10 @@ $(document).ready(function(){
 		{
 			title:"Tempered Song",
 			mp3:"http://www.jplayer.org/audio/mp3/Miaow-01-Tempered-song.mp3",
+		},
+		{
+			title:"Moon - Dust",
+			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1f49f6168e1ea478fac8787c696202a66&authkey=ATfbU3BJNwr-QGIi_hhuOGQ",
 		}
 	], 
 	{
@@ -52,16 +52,18 @@ $(document).ready(function(){
 		
 		//default playlist options
 		playlistOptions: {
-			//autoPlay: false,
+			autoPlay: false,
+			//this loops the playlist
 			loopOnPrevious: true,
-			//shuffleOnLoop: true,
-			//enableRemoveControls: false,
-			//displayTime: 'slow',
-			//addTime: 'fast',
-			//removeTime: 'fast',
-			//shuffleTime: 'slow'
+			shuffleOnLoop: false,
+			enableRemoveControls: false,
+			displayTime: 'slow',
+			addTime: 'fast',
+			removeTime: 'fast',
+			shuffleTime: 'slow'
 		},
 		
+		//this loops the playlist
 		loop: true,
 		swfPath: "js/jplayer",
 		supplied: "mp3",
@@ -87,15 +89,51 @@ img {
 position: absolute;
 top: 25%;
 left: 30%;
-transition: width 2s, transform 2s;
+animation: shake 10s infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+animaytion-fill-mode: forwards;
 }
+
+@keyframes shake {
+0% {
+width: 750px;
+height: 382px;
+}
+20% {
+width: 800px;
+height: 400px;
+transform: rotate(-7deg);
+}
+40% {
+width: 800px;
+height: 400px;
+transform: rotate(7deg);
+}
+60% {
+width: 750px;
+height: 382px;
+transform: rotate(-7deg);
+}
+80% {
+width: 750px;
+height: 382px;
+transform: rotate(7deg);
+}
+100% {
+width: 750px;
+height: 382px;
+}
+}
+</style>
+</head>
+<!--transition: width 2s, transform 2s;-->
+<!--
 img:hover {
 width: 45%;
 transform: rotate(20deg);
 }
-</style>
-</head>
-
+-->
 <script type = "text/javascript">
 	
 	$(function()
@@ -113,8 +151,14 @@ transform: rotate(20deg);
 	</script>
 
 <body bgcolor="#e85cb9">
+
+<div class="logo">
 <img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
- <select id="stars">
+</div>
+
+
+
+  <select id="stars">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -123,6 +167,7 @@ transform: rotate(20deg);
 </select>
 <script type="text/javascript">
 </script>
+
 
 <!--display the current track-->
 <div id="current-track"> </div>
@@ -153,6 +198,7 @@ transform: rotate(20deg);
 				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
 			</div>				
 		</div>
+		<!--hide the playlist-->
 		<div class="jp-playlist" style="display:none;">
 			<ul>
 				<li>&nbsp;</li>
