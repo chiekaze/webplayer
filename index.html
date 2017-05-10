@@ -76,14 +76,12 @@ $(document).ready(function(){
 	
 	//shuffles the playlist 
 	myPlaylist.shuffle(true); 
-	//plays the 1st item (doesnt work with shuffle)
-	//myPlaylist.play(1); 
+ 
 	//plays the n:st item (doesnt work with shuffle)
 	//myPlaylist.play(n); 
 });
-
-
 </script>
+
 <style>
 img {
 position: absolute;
@@ -96,43 +94,38 @@ width: 45%;
 transform: rotate(20deg);
 }
 </style>
+
 </head>
 
 <script type = "text/javascript">
-	
 	$(function()
 	{
-	
 		$('#example').barrating({
 		
 		theme: 'css-stars'
 		});
 	});
-	</script>
+</script>
 
 <body bgcolor="#e85cb9">
 <img class="gay" src="assets/hotline.png" width = "750"; height = "382";>
- <select id="example">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-<script type="text/javascript">
-</script>
 
-<!--display the current track-->
-<div id="current-track"> </div>
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+
 	<div class="jp-type-playlist">
+	
 		<div class="jp-gui jp-interface">	
+		
+			<!--display the current track-->
+			<div id="current-track"> &nbsp; </div>
+			
 			<div class="jp-controls">
-				<button class="jp-previous" role="button" tabindex="0">previous</button>
+			<!--<button class="jp-previous" role="button" tabindex="0">previous</button>-->
 				<button class="jp-play" role="button" tabindex="0">play</button>
 				<button class="jp-next" role="button" tabindex="0">next</button>
 				<button class="jp-stop" role="button" tabindex="0">stop</button>
+
 			</div>
 			<div class="jp-progress">
 				<div class="jp-seek-bar">
@@ -147,10 +140,11 @@ transform: rotate(20deg);
 				</div>
 			</div>
 			<div class="jp-time-holder">
-				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+				<!--<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>-->
 				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
 			</div>				
 		</div>
+		
 		<!--hide the playlist-->
 		<div class="jp-playlist" style="display:none;">
 			<ul>
@@ -164,6 +158,15 @@ transform: rotate(20deg);
 		</div>
 	</div>
 </div>
+
+<select id="example">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+
 </body>
 
 </html>

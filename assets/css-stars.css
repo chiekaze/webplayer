@@ -3,6 +3,7 @@
   white-space: nowrap;
 }
 .br-theme-css-stars .br-widget a {
+  position:relative;
   text-decoration: none;
   height: 18px;
   width: 18px;
@@ -36,4 +37,7 @@
     content: "\2605";
     color: black;
   }
+}
+#example{
+	left:500px;
 }
