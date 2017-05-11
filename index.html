@@ -404,8 +404,10 @@ transform: rotate(20deg);
 		
 			theme: 'css-stars',
 			showSelectedRating: false,
-			onSelect: function(number,text) {
-				value = number;
+			allowEmpty: null,
+			initialRating: 1,
+			onSelect: function(value,text, event) {
+				value = rating;
 		}
 		});
 	});
