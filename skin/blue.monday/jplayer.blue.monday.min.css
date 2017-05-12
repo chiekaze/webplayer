@@ -45,7 +45,7 @@
 	margin-top:35px;
 	font-size: 40px;
 	font-family:disco;
-	color:#c60084;
+	color:#FFFFFF;
 }
 
 /* player background */
@@ -55,11 +55,11 @@
 	left:10px;
 	right:10px;
 	position:fixed;
-	background-color:#666699;
+	background-color:#FFFFFF;
 	/*width:100% ;*/
 	border: 1px solid black;
 	/*margin: auto;*/
-    background-color: lightblue;
+    background-color: #000000;
 }
 
 /* height of the player */
@@ -102,17 +102,17 @@
 	margin-left:10px;
 	width:40px;
 	height:40px;
-	background:url(jplayer.blue.monday.jpg) no-repeat }
+	background:url(player/play.png) no-repeat }
 	
 /* play button pressed */
 .jp-play:focus {
-	background:url(jplayer.blue.monday.jpg) -41px 0 no-repeat }
+	background:url(player/play.png) no-repeat }
 	
 .jp-state-playing .jp-play {
-	background:url(jplayer.blue.monday.jpg) 0 -42px no-repeat }
+	background:url(player/pause.png) no-repeat }
 	
 .jp-state-playing .jp-play:focus {
-	background:url(jplayer.blue.monday.jpg) -41px -42px no-repeat }
+	background:url(player/pause.png) no-repeat }
 	
 .jp-next,.jp-previous,.jp-stop {
 	/* stop-, next- and previous-button size */
@@ -124,25 +124,25 @@
 	
 /* stop button */
 .jp-stop {
-	background:url(jplayer.blue.monday.jpg) 0 -83px no-repeat;
+	background:url(player/stop.png) no-repeat;
 	/* stop-button horizontal position */
 	margin-left:10px }
 	
 /* stop button pressed */
 .jp-stop:focus {
-	background:url(jplayer.blue.monday.jpg) -29px -83px no-repeat }
+	background:url(player/stop.png) no-repeat }
 	
 .jp-previous {
 	background:url(jplayer.blue.monday.jpg) 0 -112px no-repeat }
 	
 .jp-previous:focus {
-	background:url(jplayer.blue.monday.jpg) -29px -112px no-repeat }
+	background:url(player/ff.png) no-repeat }
 	
 .jp-next {
-	background:url(jplayer.blue.monday.jpg) 0 -141px no-repeat }
+	background:url(player/ff.png) no-repeat }
 	
 .jp-next:focus {
-	background:url(jplayer.blue.monday.jpg) -29px -141px no-repeat }
+	background:url(player/ff.png) no-repeat }
 	
 .jp-progress {
 	overflow:hidden;
