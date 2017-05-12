@@ -418,12 +418,13 @@ position: fixed;
 }
 
 .sun {
-	top:70%;
+	top:83%;
 	left:50%;
-	margin-left:-5%;
+	width: 250px;
+	height: 250px;
+	margin-left:-175px;
+	margin-top:-175px;
 	border-radius: 50%;
-	width: 200px;
-	height: 200px;
 	position:fixed;
 	background-color: #DEBF23;
 	animation: solar 10s infinite;
@@ -452,10 +453,12 @@ position: fixed;
 }
 
 .trees {
-	top:77%;
+	top:60%;
 	left:120%;
+	margin-left:51px;
+	margin-top:90px;
 	position:fixed;
-	animation: driving 12s infinite;
+	animation: driving 20s infinite;
 }
 
 @keyframes driving {
@@ -566,7 +569,7 @@ setInterval(updateGradient,10);
 
 <div class="sun"></div>
 <div class="trees">
-<img class="palm1" src="assets/palm1.png" width = "34" height = "60">
+<img class="palm1" src="assets/palm1.png" width = "102" height = "180">
 </div>
 <div class="beach"></div>
 
