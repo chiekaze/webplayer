@@ -170,14 +170,14 @@
 /* intredasting you dont need these(yet)*/
 .jp-seek-bar {
 	/*background:url(jplayer.blue.monday.jpg) 0 -202px repeat-x; */
-	background-color: #bcbcba;
+	background-color: #940773;
 	width:0;
 	height:100%;
 	cursor:pointer }
 	
 .jp-play-bar {
 /*	background:url(jplayer.blue.monday.jpg) 0 -218px repeat-x; */
-	background-color: #ffb630;
+	background-color: #EB1587;
 	width:0;
 	height:100% }
 /*------------------------------------*/
@@ -241,7 +241,7 @@
 	position:absolute;
 	overflow:hidden;
 	/*background:url(jplayer.blue.monday.jpg) 0 -250px repeat-x;*/
-	background-color: #bcbcba;
+	background-color: #940773;
 	top:10px;
 	left:24px;
 	width:46px;
@@ -250,7 +250,7 @@
 	
 .jp-volume-bar-value {
 	/*background:url(jplayer.blue.monday.jpg) 0 -256px repeat-x; */
-	background-color: #ffb630;
+	background-color: #EB1587;
 	width:0;
 	height:15px }
 

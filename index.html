@@ -318,31 +318,6 @@ $(document).ready(function(){
 	//plays the n:st item (doesnt work with shuffle)
 	//myPlaylist.play(n); 
 });
-/*
-var mainCanvas = document.querySelector("#solball");
-var mainContext = mainCanvas.getContext("2d");
-
-var canvasWidth = mainCanvas.width;
-var canvasHeight = mainCanvas.height;
-
-
-function drawCircle() {
-mainContext.clearRect(0, 0, canvasHeight);
-
-mainContext.fillStyle = "#FFFFFF";
-mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
-
-mainContext.beginPath();
-
-var radius = 77;
-mainContext.arc(100, 100, radius, 0, Math.PI * 2, false);
-mainContext.closePath();
-
-mainContext.fillStyle = "#FFFFFF";
-mainContext.fill();
-}
-drawCircle();
-*/
 </script>
 <!--
 top:13%;
@@ -358,9 +333,9 @@ justify-content: center;
 .hot {
 position: fixed;
 top: 50%;
-left: 50%;
-margin-top: -23%;
-margin-left: -23%;
+left: 45%;
+margin-top: -450px;
+margin-left: -450px;
 animation: shake 10s infinite;
 animation-direction: alternate;
 animation-timing-function: ease-in-out;
@@ -368,35 +343,35 @@ animation-timing-function: ease-in-out;
 
 @keyframes shake {
 0% {
-margin-top: -23%;
-margin-left: -23%;
+margin-top: -450px;
+margin-left: -300px;
 width: 900px;
 height: 600px;
 }
 25% {
-margin-top: -23%;
-margin-left: -23%;
+margin-top: -450px;
+margin-left: -300px;
 width: 900px;
 height: 600px;
 transform: rotate(7deg);
 }
 50% {
-margin-top: -23%;
-margin-left: -23%;
+margin-top: -450px;
+margin-left: -300px;
 width: 900px;
 height: 600px;
 transform: rotate(-7deg);
 }
 75% {
-margin-top: -25%;
-margin-left: -25%;
+margin-top: -500px;
+margin-left: -333px;
 width: 1000px;
 height: 666px;
 transform: rotate(7deg);
 }
 100% {
-margin-top: -25%;
-margin-left: -25%;
+margin-top: -500px;
+margin-left: -333px;
 width: 1000px;
 height: 666px;
 transform: rotate(-7deg);
@@ -418,12 +393,12 @@ position: fixed;
 }
 
 .sun {
-	top:83%;
+	top:78%;
 	left:50%;
 	width: 250px;
 	height: 250px;
-	margin-left:-175px;
-	margin-top:-175px;
+	margin-left:-125px;
+	margin-top:-125px;
 	border-radius: 50%;
 	position:fixed;
 	background-color: #DEBF23;
@@ -455,9 +430,9 @@ position: fixed;
 .trees {
 	top:60%;
 	left:120%;
+	position:fixed;
 	margin-left:51px;
 	margin-top:90px;
-	position:fixed;
 	animation: driving 20s infinite;
 	animation-timing-function: linear;
 }
@@ -472,17 +447,6 @@ left:-20%;
 }
 </style>
 </head>
-<!--transition: width 2s, transform 2s;-->
-<!--
-img:hover {
-width: 45%;
-transform: rotate(20deg);
-}
-
-</style>
-
-</head>
--->
 
 <script type = "text/javascript">
 	$(function() {
@@ -564,15 +528,16 @@ setInterval(updateGradient,10);
 <body>
 <div id="gradient" />
 
-<div class="logo">
-	<img class="hot" src="assets/radiotext.png" width = "900"; height = "600";>
-</div>
 
 <div class="sun"></div>
 <div class="trees">
-<img class="palm1" src="assets/palm1.png" width = "102" height = "180">
+	<img class="palm1" src="assets/palm1.png" width = "102" height = "180">
 </div>
 <div class="beach"></div>
+
+<div class="logo">
+	<img class="hot" src="assets/radiotext.png" width = "900"; height = "600";>
+</div>
 
  <select id="stars">
   <option value="1">1</option>
