@@ -49,6 +49,19 @@
 	color:#FFFFFF;
 }
 
+#remainingTime {
+	/*width:500px;*/
+	/*height:40px;*/
+	position:fixed;
+	right:175px;
+	top:903px;
+	font-size: 35px;
+	font-family:disco;
+	line-height:1.6;
+	color:#FFFFFF;
+	z-index: 1000;
+}
+
 /* player background */
 .jp-interface {
 	/* position of player background */
@@ -264,7 +277,7 @@
 /* same for playlist */
 .jp-audio .jp-type-playlist .jp-time-holder {
 	top:10px;
-	right:20px;
+	right:40px;
 	width:130px }
 
 /* current time widht and font size */
