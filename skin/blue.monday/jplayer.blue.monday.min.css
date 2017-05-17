@@ -49,6 +49,19 @@
 	color:#FFFFFF;
 }
 
+#remainingTime {
+	/*width:500px;*/
+	/*height:40px;*/
+	position:fixed;
+	right:175px;
+	top:903px;
+	font-size: 35px;
+	font-family:disco;
+	line-height:1.6;
+	color:#FFFFFF;
+	z-index: 1000;
+}
+
 /* player background */
 .jp-interface {
 	/* position of player background */
