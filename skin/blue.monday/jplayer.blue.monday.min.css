@@ -54,7 +54,8 @@
 	/*height:40px;*/
 	position:fixed;
 	right:175px;
-	top:903px;
+	/*top:903px;*/
+	bottom:15px;
 	font-size: 35px;
 	font-family:disco;
 	line-height:1.6;
