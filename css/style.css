@@ -1,0 +1,409 @@
+/* body */
+body {
+	background-color:#000000;
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:100%;
+}
+
+/* background */
+#gradient {
+	position:fixed;
+	width:100%;
+	height:100%;
+}
+
+/* mountain-bg */
+/*
+div.mount .mountain {
+	top:50%;
+	left:50%;
+	margin-top:-540px;
+	margin-left:-960px;
+	position:fixed;
+}
+*/
+
+/* logo pic */
+div.logo .hot {
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-181px;
+	margin-left:-369px;
+	animation:shake 15s infinite;
+	animation-direction:alternate;
+	animation-timing-function:ease-in-out;
+}
+
+
+/* palms */
+/*
+div.trees .palms {
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-50px;
+	margin-left:-480px;
+}
+*/
+
+/* logo animation */
+@keyframes shake {
+	0% {
+		transform:rotate(0deg);
+	}
+	25% {
+		transform:rotate(9deg);
+	}
+	50% {
+		transform:rotate(-7deg);
+	}
+	75% {
+		transform:rotate(7deg);
+	}
+	100% {
+		transform:rotate(-10deg);
+	}
+}
+
+/* sun */
+.sun {
+	top:50%;
+	left:50%;
+	width:500px;
+	height:500px;
+	margin-left:-250px;
+	margin-top:-250px;
+	border-radius:50%;
+	position:fixed;
+	background-color:#debf23;
+	animation:solar 10s infinite;
+}
+
+/* sun animation */
+@keyframes solar {
+	0% {
+		background-color:#debf23;
+	}
+	50% {
+		background-color:#db3918;
+		width:550px;
+		height:550px;
+		margin-left:-275px;
+		margin-top:-275px;
+	}
+	
+	100% {
+		background-color:#debf23;
+	}
+}
+
+/* ----------------------player---------------------- */
+.jp-audio :focus {
+	outline:0;
+}
+
+.jp-audio button::-moz-focus-inner {
+	border:0; 
+}
+
+@font-face {
+    font-family: 'disco';
+    src: url('../fonts/discoduck3dital.ttf');
+}
+
+.jp-icon {
+	font-family:'disco';
+}
+
+.jp-audio {
+	font-size:40px;
+	font-family:disco;
+	line-height:1.6;
+	color:#ffffff;
+	height:100px;
+}
+
+#current-track {
+	position:fixed;
+	margin-left:180px;
+	margin-top:35px;
+	font-size:40px;
+	font-family:disco;
+	line-height:1.6;
+	color:#ffffff;
+}
+
+#remaining-time {
+	position:fixed;
+	right:200px;
+	margin-top:35px;
+	font-size:40px;
+	font-family:disco;
+	line-height:1.6;
+	color:#ffffff;
+	z-index:1000;
+}
+
+/* player background */
+.jp-interface {
+	bottom:10px;
+	left:10px;
+	right:10px;
+	position:fixed;
+	border:2px solid #940773;
+    background-color:#580093;
+}
+
+/* height of the player */
+.jp-audio .jp-interface {
+	height:100px;
+}
+
+/* play and stop button */	
+.jp-audio .jp-controls {
+	width:180px;
+}
+	
+.jp-controls button {
+	display:block;
+	float:left;
+	overflow:hidden;
+	text-indent:-9999px;
+	border:none;
+	cursor:pointer;
+}
+
+/* play button */
+.jp-play {
+	margin-top:50px;
+	margin-left:10px;
+	width:40px;
+	height:40px;
+	background:url(../img/player/play.png) no-repeat;
+}
+	
+/* play button pressed */
+.jp-play:focus {
+	background:url(../img/player/play.png) no-repeat;
+}
+	
+.jp-state-playing .jp-play {
+	background:url(../img/player/pause.png) no-repeat;
+}
+	
+.jp-state-playing .jp-play:focus {
+	background:url(../img/player/pause.png) no-repeat;
+}
+	
+/* stop button */
+.jp-stop {
+	width:40px;
+	height:40px;
+	margin-top:50px;
+	margin-left:10px;
+	background:url(../img/player/stop.png) no-repeat;
+}
+	
+/* stop button pressed */
+.jp-stop:focus {
+	background:url(../img/player/stop.png) no-repeat;
+}
+	
+.jp-next {
+	width:40px;
+	height:40px;
+	margin-top:50px;
+	margin-left:10px;
+	background:url(../img/player/next.png) no-repeat;
+}
+	
+.jp-next:focus {
+	background:url(../img/player/next.png) no-repeat;
+}
+	
+.jp-progress {
+	overflow:hidden;
+	position:absolute;
+	left:10px;
+	right:10px;
+	top:10px;
+	margin:auto;
+	background-color:#940773;
+	height:30px;		
+}
+
+.jp-seek-bar {
+	background-color:#940773;
+	width:0;
+	height:100%;
+	cursor:pointer;
+}
+	
+.jp-play-bar {
+	background-color:#eb1587;
+	width:0;
+	height:100%;
+}
+
+.jp-seeking-bg {
+	background-color:#940773; 
+}
+	
+.jp-state-no-volume .jp-volume-controls {
+	display:none;
+}
+
+/* volume position and width */
+.jp-volume-controls {
+	position:absolute;
+	top:50px;
+	right:130px;
+	margin:auto;
+}
+
+.jp-volume-controls button {
+	display:block;
+	position:absolute;
+	overflow:hidden;
+	text-indent:-9999px;
+	border:none;
+	cursor:pointer;
+}
+
+/* mute and max buttons width and height */
+.jp-mute,.jp-volume-max {
+	width:40px;
+	height:40px;
+}
+
+/* max button x pos */
+.jp-volume-max {
+	left:80px;
+}
+
+.jp-mute {
+	left:-20px;
+	background:url(../img/player/volume0.png) no-repeat;
+}
+	
+.jp-mute:focus {
+	background:url(../img/player/volume0.png) no-repeat;
+}
+	
+.jp-state-muted .jp-mute {
+	background:url(../img/player/volume0.png) no-repeat;
+}
+	
+.jp-state-muted .jp-mute:focus {
+	background:url(../img/player/volume0.png) no-repeat;
+}
+	
+.jp-volume-max {
+	background:url(../img/player/volume1.png) no-repeat;
+}
+	
+.jp-volume-max:focus {
+	background:url(../img/player/volume1.png) no-repeat;
+}
+	
+/* volume bar */
+.jp-volume-bar {
+	position:absolute;
+	overflow:hidden;
+	background-color:#940773;
+	top:10px;
+	left:30px;
+	width:40px;
+	height:15px;
+	cursor:pointer;
+}
+	
+.jp-volume-bar-value {
+	background-color:#eb1587;
+	width:0;
+	height:15px;
+}
+
+.jp-jplayer,.jp-jplayer audio {
+	width:0;
+	height:0;
+}
+	
+.jp-jplayer {
+	background-color:#000;
+}
+	
+.jp-toggles {
+	padding:0;
+	margin:0 auto;
+	overflow:hidden;
+}
+	
+.jp-audio .jp-type-playlist .jp-toggles {
+	width:55px;
+	margin:0;
+	position:absolute;
+	left:325px;
+	top:50px;
+}
+
+.jp-toggles button {
+	display:block;
+	float:left;
+	width:25px;
+	height:18px;
+	text-indent:-9999px;
+	line-height:100%;
+	border:none;
+	cursor:pointer;
+}
+
+.jp-no-solution {
+	padding:5px;
+	font-size:.8em;
+	background-color:#eee;
+	border:2px solid #009be3;
+	color:#000;
+	display:none;
+}
+	
+.jp-no-solution a {
+	color:#000;
+}
+	
+.jp-no-solution span {
+	font-size:1em; 
+	display:block;
+	text-align:center;
+	font-weight:700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
