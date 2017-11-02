@@ -28,7 +28,7 @@ div.mount .mountain {
 /* logo pic */
 div.logo .hot {
 	position:fixed;
-	top:50%;
+	top:45%;
 	left:50%;
 	margin-top:-181px;
 	margin-left:-369px;
@@ -92,7 +92,7 @@ div.trees .palms {
 
 /* sun */
 .sun {
-	top:50%;
+	top:45%;
 	left:50%;
 	width:500px;
 	height:500px;
