@@ -130,6 +130,10 @@ $(document).ready(function(){
 			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=19b172b7314da443a848ac21951b52f56&authkey=Aexf5GCqhc9xODweKBI0bzE",
 		},
 		{
+			title:"Fixions - Killing Pool",
+			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1147354a4e9e34a1999a056cabd237de9&authkey=AW_73u5C_gdsHgwShStvD3o&e=c204fea57738432091c816a4bad6653a",
+		},
+		{
 			title:"Frekt - Richard",
 			mp3:"https://edukainuu-my.sharepoint.com/personal/kimkarjalainen_kamk_fi/_layouts/15/guestaccess.aspx?docid=1989381d3d02b450088b83d9e4966a33d&authkey=AX2P2tOdoNQjZPhq_uorVB0",
 		},
