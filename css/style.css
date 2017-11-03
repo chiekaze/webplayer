@@ -160,7 +160,7 @@ div.trees .palms {
 
 #remaining-time {
 	position:fixed;
-	right:200px;
+	right:30px;
 	margin-top:35px;
 	font-size:40px;
 	font-family:disco;
@@ -202,48 +202,48 @@ div.trees .palms {
 .jp-play {
 	margin-top:50px;
 	margin-left:10px;
-	width:40px;
-	height:40px;
-	background:url(../img/player/play.png) no-repeat;
+	width:59px;
+	height:18px;
+	background:url(../img/player/sprite5play.png) no-repeat;
 }
 	
 /* play button pressed */
 .jp-play:focus {
-	background:url(../img/player/play.png) no-repeat;
+	background:url(../img/player/sprite5play.png) no-repeat;
 }
 	
 .jp-state-playing .jp-play {
-	background:url(../img/player/pause.png) no-repeat;
+	background:url(../img/player/sprite5pause.png) no-repeat;
 }
 	
 .jp-state-playing .jp-play:focus {
-	background:url(../img/player/pause.png) no-repeat;
+	background:url(../img/player/sprite5pause.png) no-repeat;
 }
 	
 /* stop button */
 .jp-stop {
-	width:40px;
-	height:40px;
-	margin-top:50px;
+	width:59px;
+	height:18px;
+	margin-top:10px;
 	margin-left:10px;
-	background:url(../img/player/stop.png) no-repeat;
+	background:url(../img/player/sprite5stop.png) no-repeat;
 }
 	
 /* stop button pressed */
 .jp-stop:focus {
-	background:url(../img/player/stop.png) no-repeat;
+	background:url(../img/player/sprite5stop.png) no-repeat;
 }
 	
 .jp-next {
-	width:40px;
-	height:40px;
+	width:59px;
+	height:18px;
 	margin-top:50px;
 	margin-left:10px;
-	background:url(../img/player/next.png) no-repeat;
+	background:url(../img/player/sprite5ffw.png) no-repeat;
 }
 	
 .jp-next:focus {
-	background:url(../img/player/next.png) no-repeat;
+	background:url(../img/player/sprite5ffw.png) no-repeat;
 }
 	
 .jp-progress {
@@ -281,8 +281,8 @@ div.trees .palms {
 /* volume position and width */
 .jp-volume-controls {
 	position:absolute;
-	top:50px;
-	right:130px;
+	top:78px;
+	left:100px;
 	margin:auto;
 }
 
@@ -297,41 +297,42 @@ div.trees .palms {
 
 /* mute and max buttons width and height */
 .jp-mute,.jp-volume-max {
-	width:40px;
-	height:40px;
+	width:17px;
+	height:17px;
 }
 
-/* max button x pos */
+/* max button distance from min */
 .jp-volume-max {
-	left:80px;
+	left:20px;
 }
 
 .jp-mute {
 	left:-20px;
-	background:url(../img/player/volume0.png) no-repeat;
+	background:url(../img/player/sprite5minvol.png) no-repeat;
 }
 	
 .jp-mute:focus {
-	background:url(../img/player/volume0.png) no-repeat;
+	background:url(../img/player/sprite5minvol.png) no-repeat;
 }
 	
 .jp-state-muted .jp-mute {
-	background:url(../img/player/volume0.png) no-repeat;
+	background:url(../img/player/sprite5minvol.png) no-repeat;
 }
 	
 .jp-state-muted .jp-mute:focus {
-	background:url(../img/player/volume0.png) no-repeat;
+	background:url(../img/player/sprite5minvol.png) no-repeat;
 }
 	
 .jp-volume-max {
-	background:url(../img/player/volume1.png) no-repeat;
+	background:url(../img/player/sprite5maxvol.png) no-repeat;
 }
 	
 .jp-volume-max:focus {
-	background:url(../img/player/volume1.png) no-repeat;
+	background:url(../img/player/sprite5maxvol.png) no-repeat;
 }
 	
 /* volume bar */
+/*
 .jp-volume-bar {
 	position:absolute;
 	overflow:hidden;
@@ -348,6 +349,7 @@ div.trees .palms {
 	width:0;
 	height:15px;
 }
+*/
 
 .jp-jplayer,.jp-jplayer audio {
 	width:0;
